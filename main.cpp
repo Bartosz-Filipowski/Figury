@@ -3,7 +3,7 @@
 #include "Rectangle.h"
 #include "Square.h"
 #include "Triangle.h"
-
+#include "Circle.h"
 
 int main()
 {
@@ -12,6 +12,7 @@ int main()
     Rectangle R3;
     Square S1("S1", 5.0);
     Triangle T1("T1", 5 , 5 , 5);
+    Circle C1("C1", 3);
 
     R1.Info();
     std::cout << std::endl;
@@ -21,6 +22,7 @@ int main()
     std::cout << std::endl;
     S1.Info();
     T1.Info();
+    C1.Info();
 
     std::cout << "Wykorzystanie wskaźnika" << std::endl;
     Figure* pointer_s = &S1;

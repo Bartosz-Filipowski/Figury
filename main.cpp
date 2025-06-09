@@ -25,12 +25,23 @@ int main()
     C1.Info();
 
     std::cout << "Wykorzystanie wskaźnika" << std::endl;
-    Figure* pointer_s = &S1;
-    Figure* pointer_r = &R1;
-    std::cout << std::endl;
-    pointer_s->Info();
-    std::cout << std::endl;
-    pointer_r->Info();
+
+
+    Figure* figures[] = { &S1, &R1, &T1, &C1 };
+
+    int size = sizeof(figures) / sizeof(figures[0]);
+
+    for (int i = 0; i < size; i++) {
+        figures[i]->Info();
+        std::cout << std::endl;
+    }
+
+
+    for (int i = 0; i < size; i++) {
+        figures[i]->Info();
+        std::cout << std::endl;
+    }
+
 
     std::cout << "Wykorzystanie referencji" << std::endl;
     Figure& ref_s = S1;

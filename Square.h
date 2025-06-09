@@ -1,0 +1,29 @@
+//
+// Created by student on 09.06.2025.
+//
+
+#ifndef FIGURES_SQUARE_H
+#define FIGURES_SQUARE_H
+
+
+
+#include "Figure.h"
+
+class Square : public Figure
+{
+private:
+    float m_a;
+    float m_area;
+    float m_perimeter;
+
+public:
+    Square(string name = "", float a = 0);
+    virtual ~Square() {}
+    virtual float Area() const;
+    virtual float Perimeter() const;
+    virtual void Info() const;
+};
+
+
+
+#endif //FIGURES_SQUARE_H
